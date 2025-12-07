@@ -10,6 +10,11 @@
 </head>
 <body>
 
+    <div id="loader-wrapper">
+        <div class="loader"></div>
+        <div class="loader-text">Chargement...</div>
+    </div>
+
     <header>
         <nav>
             <ul>
@@ -247,8 +252,24 @@
         <p class="copyright">&copy; 2025 Lubin Demory - CV Numérique</p>
     </section>
 
-    <script>
-        // Navigation active au scroll
+<script>
+        // 1. GESTION DU CHARGEMENT
+        window.addEventListener("load", () => {
+            const loader = document.querySelector("#loader-wrapper");
+            
+            // On attend 1500ms (1.5 secondes) avant de cacher l'écran
+            // Tu peux changer 1500 par 500 pour que ce soit plus rapide
+            setTimeout(() => {
+                loader.classList.add("loader-hidden");
+                
+                // Optionnel : supprimer le loader du code une fois l'animation finie
+                loader.addEventListener("transitionend", () => {
+                    // loader.remove(); // Décommenter si tu veux le supprimer totalement du DOM
+                });
+            }, 1000); 
+        });
+
+        // 2. NAVIGATION ACTIVE AU SCROLL
         const sections = document.querySelectorAll("section");
         const navLi = document.querySelectorAll("nav ul li a");
 
@@ -257,7 +278,6 @@
             sections.forEach((section) => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
-                // Ajustement pour la détection
                 if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
                     current = section.getAttribute("id");
                 }
