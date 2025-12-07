@@ -317,3 +317,22 @@ section {
         margin-bottom: 10px;
     }
 }
+
+/* AJOUT POUR LES IMAGES */
+
+/* Pour les logos dans les formations/expériences */
+.logo-img {
+    max-width: 80px;      /* Taille max du logo */
+    max-height: 80px;
+    margin-top: 10px;
+    display: block;       /* Force le retour à la ligne */
+    object-fit: contain;  /* Garde les proportions */
+}
+
+/* Pour les images des projets (Cartes) */
+.project-card img.card-img-top {
+    width: 100%;          /* Prend toute la largeur de la carte */
+    height: 150px;        /* Hauteur fixe pour aligner les cartes */
+    object-fit: cover;    /* Recadre l'image proprement sans la déformer */
+    border-bottom: 1px solid #eee;
+}
