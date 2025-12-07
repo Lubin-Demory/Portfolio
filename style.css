@@ -56,7 +56,7 @@ nav ul li a:hover {
 /* HERO SECTION (ACCUEIL) */
 .hero {
     /* Image de fond aléatoire (technologie/ordinateur) */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://picsum.photos/1920/1080?grayscale');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/IMG-20250912-WA0007.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh; /* Prend toute la hauteur de l'écran */
