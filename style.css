@@ -336,3 +336,49 @@ section {
     object-fit: cover;    /* Recadre l'image proprement sans la déformer */
     border-bottom: 1px solid #eee;
 }
+
+/* --- COULEURS DYNAMIQUES DU MENU --- */
+
+/* Style de base pour la classe active (soulignement) */
+nav ul li a.active {
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.1); /* Petit fond léger */
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+/* 1. Accueil - Bleu */
+nav ul li a[href="#accueil"].active {
+    color: #3498db; 
+    border-bottom: 2px solid #3498db;
+}
+
+/* 2. Formations - Orange */
+nav ul li a[href="#formations"].active {
+    color: #e67e22;
+    border-bottom: 2px solid #e67e22;
+}
+
+/* 3. Compétences - Vert */
+nav ul li a[href="#competences"].active {
+    color: #2ecc71;
+    border-bottom: 2px solid #2ecc71;
+}
+
+/* 4. Expériences - Violet */
+nav ul li a[href="#experiences"].active {
+    color: #9b59b6;
+    border-bottom: 2px solid #9b59b6;
+}
+
+/* 5. Réalisations - Rouge */
+nav ul li a[href="#realisations"].active {
+    color: #e74c3c;
+    border-bottom: 2px solid #e74c3c;
+}
+
+/* 6. Contact - Gris/Jaune */
+nav ul li a[href="#contact"].active {
+    color: #f1c40f;
+    border-bottom: 2px solid #f1c40f;
+}

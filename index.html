@@ -189,5 +189,33 @@
         <p class="copyright">&copy; 2025 Lubin Demory - CV Numérique BUT Informatique</p>
     </section>
 
+    <script>
+        // On sélectionne toutes les sections et tous les liens du menu
+        const sections = document.querySelectorAll("section");
+        const navLi = document.querySelectorAll("nav ul li a");
+
+        // On écoute l'événement "scroll"
+        window.addEventListener("scroll", () => {
+            let current = "";
+
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                // Si on a scrollé jusqu'à cette section (-60px pour la marge du header)
+                if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            // On retire la classe "active" de tous les liens, et on l'ajoute au bon
+            navLi.forEach((a) => {
+                a.classList.remove("active");
+                if (a.getAttribute("href").includes(current)) {
+                    a.classList.add("active");
+                }
+            });
+        });
+    </script>
 </body>
 </html>
