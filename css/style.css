@@ -1,0 +1,319 @@
+/* RESET & GLOBAL STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; /* Police lisible [cite: 140] */
+    line-height: 1.6;
+    color: #333; /* Gris foncé pour le texte [cite: 140] */
+    background-color: #f9f9f9; /* Fond clair [cite: 140] */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* HEADER & NAVIGATION */
+header {
+    background-color: #2c3e50;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #3498db; /* Bleu au survol */
+}
+
+/* HERO SECTION (ACCUEIL) */
+.hero {
+    /* Image de fond aléatoire (technologie/ordinateur) */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://picsum.photos/1920/1080?grayscale');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Prend toute la hauteur de l'écran */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-content h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.presentation-text {
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    font-size: 1.1rem;
+    text-align: justify; /* Texte justifié [cite: 140] */
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+/* SECTIONS GÉNÉRALES */
+section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* TIMELINE (Formations & Expériences) */
+.timeline-item {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid #3498db;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.timeline-item .date {
+    font-weight: bold;
+    color: #3498db;
+    width: 150px;
+    flex-shrink: 0;
+}
+
+.timeline-item .content {
+    flex-grow: 1;
+}
+
+.timeline-item h3 {
+    margin-bottom: 5px;
+}
+
+.timeline-item ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.logo-placeholder {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background: #eee;
+    color: #777;
+    font-size: 0.8rem;
+    border-radius: 4px;
+}
+
+/* COMPÉTENCES (Grille) */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.skill-category {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.skill-category h3 {
+    margin-bottom: 20px;
+    color: #3498db;
+}
+
+.skill-category ul li {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+/* PROJETS (Cartes demandées) */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-image {
+    height: 150px;
+    background-color: #bdc3c7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7f8c8d;
+    font-weight: bold;
+}
+
+.card-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content h3 {
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    flex-grow: 1;
+    text-align: justify;
+}
+
+.tag {
+    display: inline-block;
+    background: #ecf0f1;
+    color: #2c3e50;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    margin-right: 5px;
+}
+
+/* Bouton Github Spécifique */
+.btn-github {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: auto;
+    transition: background 0.3s;
+}
+
+.btn-github:hover {
+    background-color: #000;
+}
+
+.btn-github i {
+    margin-right: 8px;
+}
+
+/* CONTACT & FOOTER */
+.footer-contact {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.footer-contact h2 {
+    color: white;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.contact-links a {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.contact-links a:hover {
+    color: #3498db;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    color: #bdc3c7;
+    margin-top: 20px;
+}
+
+/* RESPONSIVE (Mobile) */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .timeline-item .date {
+        margin-bottom: 10px;
+    }
+}
