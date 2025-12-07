@@ -409,3 +409,7 @@ section {
     .timeline-item .date { margin-bottom: 10px; }
     .tech-skills, .soft-skills-container { grid-template-columns: 1fr; }
 }
+
+html {
+  scroll-behavior: smooth;
+}
