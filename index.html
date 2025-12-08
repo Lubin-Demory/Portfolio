@@ -57,7 +57,7 @@
                     </p>
                 </div>
                 
-                <a href="pdf/CV_DEMORY_Lubin.pdf" class="btn-primary" download>
+                <a href="./CV_DEMORY_Lubin.pdf" class="btn-primary" download="CV_Lubin_Demory.pdf">
                     <i class="fas fa-download"></i> Télécharger mon CV
                 </a>
             </div>
@@ -238,7 +238,7 @@
                 </div>
 
                 <div class="project-card">
-                    <img src="img/Capture d’écran 2025-12-08 à 08.24.16.png" alt="Projet Linux" class="card-img-top">
+                    <img src="img/Capture d’écran 2025-12-08 à 08.24.16.png" alt="Mini Agile" class="card-img-top">
                     <div class="card-content">
                         <h3>Mini-Agile</h3>
                         <div>
@@ -249,9 +249,8 @@
                     </div>                    
                 </div>
 
-
                 <div class="project-card">
-                    <img src="img/Capture d’écran 2025-12-08 à 08.34.07.png" alt="Projet Linux" class="card-img-top">
+                    <img src="img/Capture d’écran 2025-12-08 à 08.34.07.png" alt="Labyrinthes" class="card-img-top">
                     <div class="card-content">
                         <h3>Labyrinthes</h3>
                         <div>
@@ -267,29 +266,43 @@
 
     </main>
 
-    <section id="contact" class="footer-contact">
-        <h2>Me Contacter</h2>
-        <div class="contact-links">
-            <a href="mailto:lubindemory@gmail.com"><i class="fas fa-envelope"></i> lubindemory@gmail.com</a>
-            <a href="https://www.linkedin.com/in/lubin-demory-566408365/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            <a href="https://github.com/Lubin-Demory" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+    <footer id="contact" class="footer-custom">
+        <div class="footer-content">
+            <h2>Restons en contact</h2>
+            <p class="footer-text">
+                À la recherche de nouvelles opportunités en développement et gestion de projet.<br>
+                N'hésitez pas à échanger avec moi !
+            </p>
+            
+            <div class="social-icons">
+                <a href="mailto:lubindemory@gmail.com" title="Envoyer un mail">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/lubin-demory-566408365/" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/Lubin-Demory" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Lubin Demory. Tous droits réservés.</p>
+                <a href="#hero" class="back-to-top">Haut de page <i class="fas fa-arrow-up"></i></a>
+            </div>
         </div>
-        <p class="copyright">&copy; 2025 Lubin Demory - CV Numérique</p>
-    </section>
+    </footer>
 
-<script>
+    <script>
         // 1. GESTION DU CHARGEMENT
         window.addEventListener("load", () => {
             const loader = document.querySelector("#loader-wrapper");
             
-            // On attend 1500ms (1.5 secondes) avant de cacher l'écran
-            // Tu peux changer 1500 par 500 pour que ce soit plus rapide
+            // Délai pour l'animation
             setTimeout(() => {
                 loader.classList.add("loader-hidden");
-                
-                // Optionnel : supprimer le loader du code une fois l'animation finie
                 loader.addEventListener("transitionend", () => {
-                    // loader.remove(); // Décommenter si tu veux le supprimer totalement du DOM
+                    // loader.remove(); 
                 });
             }, 1000); 
         });
